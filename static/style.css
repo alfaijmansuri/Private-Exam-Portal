@@ -6,8 +6,9 @@ body {
   padding : 40px 0px 40px 0px;
 }
 .size {
-  max-width: 33%;
+  	min-width: 33%;
 }
+
 .chatBox {
   width: 360px;
   height: 480px; 
@@ -72,9 +73,18 @@ body {
   color: rgb(0, 89, 101);
 }
 
+ol {
+	list-style-type: none;
+}
+
 
 @media only screen and (max-width : 480px) {
   .hideOnPhone {
-    display: none;
+    display: block;
   }
+	.size {
+		min-width: 80%;
+	}
+	
 }
+
