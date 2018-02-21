@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Good Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Vipul Bhardwaj">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{  url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')  }}" rel="stylesheet">
+
+  <!-- Custom styling -->
+  <link href="{{  url_for('static',filename='style.css')  }}" rel="stylesheet">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static',filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid head">
+    {% block head %}{% endblock %}
+  </div>
+  <div class="container content">
+    <div class="row">
+      <div class="col-4 col-md-auto size hideOnPhone" style="border: 1px solid red;">
+        <!-- Codes -->
+          <p class="lead">
+              is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements
+                over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the v
+                isual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text
+                by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to 
+                deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's 
+                still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, 
+                or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages,
+                  as are digraphs not to be found in the original.
+            </p>
+      </div>
+      <div class="col-4 col-md-auto size">
+          <div class="chatBox">
+            <div class="textMsg" id="msgBoxContainer">
+              <!-- Messages wrapper in p -->
+              <!-- Jinja generated -->
+              {% block pm %}{% endblock %}
+            </div>
+            <div class="textField">
+              <form action="{{ url_for('message') }}" method="post">
+                <input class="inputMsg" type="text" name="msg" placeholder="Enter Message Here" autofocus>
+                <button class="fornButton">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <div class="col-4 col-md-auto size hideOnPhone" style="border: 1px solid red;">
+        <!-- Screen shots -->
+          <p class="lead">
+              is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements
+                over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the v
+                isual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text
+                by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to 
+                deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's 
+                still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, 
+                or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages,
+                  as are digraphs not to be found in the original.
+            </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid foot">
+    {% block foot %}{% endblock %}
+  </div>
+  
+  <script src="{{ url_for('static',filename='reload.js') }}"></script>
+
+</body>
+</html>

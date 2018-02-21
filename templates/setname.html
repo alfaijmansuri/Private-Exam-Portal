@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Good Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Vipul Bhardwaj">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{  url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')  }}" rel="stylesheet">
+
+  <!-- Custom styling -->
+  <link href="{{  url_for('static',filename='style.css')  }}" rel="stylesheet">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static',filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <style>
+        .custom {
+            padding: 250px 10px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["username"].value;
+            if (x == "" || x == null) {
+                alert("We know you are in a hurry\nJust let's us know who you are and that's all.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container custom">
+        <form name="myForm" action="{{ url_for('setname') }}" onsubmit="return validateForm()" method="post">
+            <input type="text" name="username" placeholder="What should we call you.">
+            <input type="submit" value="GO">
+        </form>
+    </div>
+</body>
+</html>

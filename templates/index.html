@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <h3> Heading </h3>
+{% endblock %}
+
+{% block foot %}
+    <h3> Footer </h3>
+{% endblock %}
+
+
+{% block pm %}
+    {% for name,message in messages %}
+        {% if name|string() != username|string() %}
+                <div class="leftAlign">
+                        <spam class="textPopupName">{{ name }}</spam>
+                        <br />
+                        <spam class="textPopupContent">{{ message }}</spam>
+                </div>  
+        {% else %}
+                <div class="rightAlign">
+                        <spam class="textPopupContent">{{ message }}</spam>
+                </div>
+        {% endif %}
+    {% endfor %}
+    <script src="{{ url_for('static',filename='core.js') }}"></script>
+{% endblock %}

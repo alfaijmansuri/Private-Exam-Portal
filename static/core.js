@@ -1,0 +1,1 @@
+$("#msgBoxContainer").animate({ scrollTop: $("#msgBoxContainer")[0].scrollHeight}, 1000);
