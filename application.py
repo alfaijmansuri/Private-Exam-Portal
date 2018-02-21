@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
 from flask_session import Session
 
 
@@ -39,9 +39,9 @@ def setname():
     if request.method == "POST":
         username = request.form.get('username')
         session["username"] = username
-        return render_template("index.html",messages=messageList,username=session.get("username"))
+        return redirect(url_for('index'))
     else:
-        return "Please submit the form via Post only"
+        return render_template("setname.html")
 
 
 

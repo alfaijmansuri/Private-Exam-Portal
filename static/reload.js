@@ -1,4 +1,4 @@
 function reload() {
     window.location.href = window.location.origin + "/message";
 }
-setTimeout(reload,20000);
+setTimeout(reload,60000);

@@ -1,9 +1,8 @@
-
 body {
   text-align : center;
 }
 .head, .foot, .content {
-  padding : 40px 0px 40px 0px;
+  padding : 30px 0px 5px 0px;
 }
 .size {
   	min-width: 33%;
@@ -73,7 +72,7 @@ body {
   color: rgb(0, 89, 101);
 }
 
-ol {
+ol,ul {
 	list-style-type: none;
 }
 
