@@ -48,4 +48,4 @@ def setname():
 try:
     app.run(threaded=True,host="0.0.0.0")
 except:
-    print("Error occured")
+    print("error occured")
